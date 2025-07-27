@@ -1,59 +1,118 @@
-# Health-Caree
+# 🏥 Healthcare Diabetes Prediction Dashboard – Python & Tableau Project
+
+A data science capstone project leveraging Python and Tableau to predict diabetes outcomes using medical diagnostic data, with insights visualized through interactive dashboards.
+
+
 ![Healthcare](https://user-images.githubusercontent.com/122566558/212751550-1a726966-f0c3-41fd-a999-c617bf8db082.png)
 
-Data Science Capstone Project Using Python and Tableau 10
 
-DESCRIPTION
+## 🧠 Problem Overview
 
-Problem Statement NIDDK (National Institute of Diabetes and Digestive and Kidney Diseases) research creates knowledge about and treatments for the most chronic, costly, and consequential diseases. The dataset used in this project is originally from NIDDK. The objective is to predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Build a model to accurately predict whether the patients in the dataset have diabetes or not. Dataset Description The datasets consists of several medical predictor variables and one target variable (Outcome). Predictor variables includes the number of pregnancies the patient has had, their BMI, insulin level, age, and more.
+Chronic diseases like diabetes are on the rise globally. NIDDK (National Institute of Diabetes and Digestive and Kidney Diseases) provides crucial datasets to support research in this domain. The goal of this project is to predict whether a patient is diabetic based on various medical attributes. The dataset contains features such as glucose levels, BMI, age, insulin, and more. 
 
-Variables Description Pregnancies Number of times pregnant Glucose Plasma glucose concentration in an oral glucose tolerance test BloodPressure Diastolic blood pressure (mm Hg) SkinThickness Triceps skinfold thickness (mm) Insulin Two hour serum insulin BMI Body Mass Index DiabetesPedigreeFunction Diabetes pedigree function Age Age in years Outcome Class variable (either 0 or 1). 268 of 768 values are 1, and the others are 0 Project Task: Week 1 Data Exploration:
+This project covers the end-to-end pipeline from data exploration and preprocessing in Python to visual storytelling in Tableau.
 
-Perform descriptive analysis. Understand the variables and their corresponding values. On the columns below, a value of zero does not make sense and thus indicates missing value:
-• Glucose
 
-• BloodPressure
+## 📁 Dataset Summary
 
-• SkinThickness
+| Feature                  | Description                                                    |
+|--------------------------|----------------------------------------------------------------|
+| Pregnancies              | Number of times pregnant                                       |
+| Glucose                  | Plasma glucose concentration in an oral glucose tolerance test |
+| BloodPressure            | Diastolic blood pressure (mm Hg)                              |
+| SkinThickness            | Triceps skinfold thickness (mm)                               |
+| Insulin                  | Two-hour serum insulin (mu U/ml)                              |
+| BMI                      | Body Mass Index                                               |
+| DiabetesPedigreeFunction| Diabetes pedigree function (family history)                   |
+| Age                      | Patient age                                                   |
+| Outcome                  | 1 for diabetic, 0 for non-diabetic                            |
 
-• Insulin
 
-• BMI
 
-Visually explore these variables using histograms. Treat the missing values accordingly.
+## 🛠️ Tools & Technologies
 
-There are integer and float data type variables in this dataset. Create a count (frequency) plot describing the data types and the count of variables.
+- Python (Pandas, NumPy, Matplotlib, Seaborn, Sklearn)
+- Tableau (for dashboarding and reporting)
+- Jupyter Notebook
 
-Project Task: Week 2 Data Exploration:
 
-Check the balance of the data by plotting the count of outcomes by their value. Describe your findings and plan future course of action.
 
-Create scatter charts between the pair of variables to understand the relationships. Describe your findings.
+## 🚶‍♂️ Implementation Steps
 
-Perform correlation analysis. Visually explore it using a heat map.
+### 🔹 Week 1 – Data Exploration
+- Loaded the dataset and explored basic statistics.
+- Identified variables with zero values that indicate missing data.
+- Replaced or imputed missing values (Glucose, BloodPressure, SkinThickness, Insulin, BMI).
+- Used histograms to visualize distributions.
 
-Project Task: Week 3 Data Modeling:
+### 🔹 Week 2 – Visual Analysis
+- Created count plots for the outcome variable.
+- Analyzed data balance between diabetic and non-diabetic classes.
+- Created scatter plots between variables to study relationships.
+- Generated correlation heatmap to detect strong and weak correlations.
 
-Devise strategies for model building. It is important to decide the right validation framework. Express your thought process.
+### 🔹 Week 3 – Modeling
+- Applied K-Nearest Neighbors (KNN) as a baseline model.
+- Tried other classifiers (Logistic Regression, Decision Tree, SVM).
+- Evaluated models using accuracy, precision, recall, and F1-score.
 
-Apply an appropriate classification algorithm to build a model. Compare various models with the results from KNN algorithm.
+### 🔹 Week 4 – Evaluation & Dashboarding
+- Analyzed AUC, sensitivity, specificity.
+- Created multiple dashboards in Tableau using the final dataset and insights.
 
-Project Task: Week 4
 
-Data Modeling:
 
-Create a classification report by analyzing sensitivity, specificity, AUC (ROC curve), etc. Please be descriptive to explain what values of these parameter you have used.
-Data Reporting:
+## 📊 Dashboard Components (Tableau)
 
-Create a dashboard in tableau by choosing appropriate chart types and metrics useful for the business. The dashboard must entail the following:
-a. Pie chart to describe the diabetic or non-diabetic population
+### ✅ Diabetic vs Non-Diabetic Population (Pie Chart)
+Clearly shows the distribution between diabetic and non-diabetic patients in the dataset.
 
-b. Scatter charts between relevant variables to analyze the relationships
+### 🔍 Variable Relationships (Scatter Plots)
+Shows how different variables like BMI vs Glucose or Age vs Insulin behave for each class.
 
-c. Histogram or frequency charts to analyze the distribution of the data
+### 📈 Histogram Distribution
+Histograms show the frequency of values across different medical attributes like BMI, Glucose, and Age.
 
-d. Heatmap of correlation analysis among the relevant variables
+### 🌡️ Correlation Heatmap
+A heatmap showing correlations among variables — useful to detect multicollinearity and key indicators.
 
-e. Create bins of these age values: 20-25, 25-30, 30-35, etc. Analyze different variables for these age brackets using a bubble chart.
+### 🔘 Bubble Chart: Age Bins
+Age is binned (20-25, 25-30, etc.), and bubble chart displays average glucose/BMI levels per age bracket.
+
+
+
+## 📁 Folder Structure
+```
+├── README.md
+├── notebooks/
+│   └── diabetes_analysis.ipynb
+├── tableau/
+│   └── final_dashboard.twb
+├── data/
+│   └── diabetes.csv
+├── images/
+│   └── dashboard_snapshots.png
+```
+
+
+
+## 🔮 Future Enhancements
+- Deploy model with a Flask web app for real-time prediction
+- Add more demographic variables (gender, lifestyle)
+- Connect Tableau to a real-time database
+
+
+
+
+
+## 🔗 Connect With Me  
+Feel free to explore more of my projects and reach out:  
+- [LinkedIn](https://www.linkedin.com/in/narendrasingh1402)
+- [YouTube](https://www.youtube.com/@Analyst_Hive)  
+- [Portfolio](https://narendra1402.github.io/)
+
+
+> 🧬 Bridging medical data with predictive intelligence to enhance healthcare outcomes.
 
 ![Main dashboard](https://user-images.githubusercontent.com/122566558/212751619-706e6beb-4ed4-4a01-8041-b7d058f4e61d.png)
+
